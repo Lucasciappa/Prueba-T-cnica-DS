@@ -1,0 +1,152 @@
+
+
+  /* ********** Reset ********** */
+
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: var(--font);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--text-color);
+    min-height:  100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+
+
+video{
+    width: 100%;
+    height: auto;
+}
+
+
+  .container-video{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, .3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+  }
+
+  .container-video .close{
+      position: absolute;
+      top: 10%;
+      right: 25px;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+
+  .container-video video{
+    width: 90%;
+    max-width: 900px;
+    transform: scale(0);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .3);
+    outline: none;
+    transition: all 0.3s;
+}
+
+    .container-video .show{
+        pointer-events: all;
+        opacity: 1;
+
+    }
+
+    .container-video .show video{
+        transform: scale(1);
+    }
+
+  
+  .container-text h3{
+      font-size: 2.2rem;
+
+  }
+  
+  .container-text p{
+      font-size: 1rem;
+      color: #555;
+      margin-top: -1rem;
+  }
+
+ /* .modal-video{
+     background-color: rgba(0, 0, 0, .3);
+     z-index: 999;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     right: 0;
+     position: fixed;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ } */
+
+
+
+  @media(min-width: 768px){
+      
+      
+    .video-start{
+        width: 100%;
+        max-height: auto;
+    }
+      
+}
+
+@media(min-width: 1024px){
+      .container-main{
+          display: flex;
+          flex-direction: row;
+        }
+        
+        .video-start{
+            width: 50vw;
+            height: auto;
+        }
+        
+        .container-main > .container-text{
+            width: 50vw;
+            height: auto;
+            margin: 1rem 4rem;
+        }
+      
+        .container-text h3{
+            font-size: 2rem;
+        }
+
+  }
+
+
